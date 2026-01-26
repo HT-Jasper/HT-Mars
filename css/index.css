@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 20px;    
+}
+
+nav{
+    top: 15px;
+    left: 5px;
+    display:flex;
+    justify-content: center;
+    position: sticky;
+    background: black;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: mediumaquamarine;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+section{
+    padding: 20px;
+    margin : 2px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: coral;
+    font-family: 'Arial Black', sans-serif;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: blue;
+    text-decoration: underline;
+}
+
+li {
+    margin: 10px 0;
+}
+
+#Experience {
+    border-radius: 10px;
+    display: block;
+}
+
+.experience-list {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.experience-item {
+  border: 2px solid #444;
+  padding: 12px;
+  border-radius: 14px;
+  margin-bottom: 10px;
+}
+
+.experience-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.job-title {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.job-desc {
+  margin-top: 8px;
+}
+
+#Connect ul {
+  display: flex;   
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+#Connect a {
+  color: white;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#Connect a:hover {
+  text-decoration: underline;
+  color: greenyellow;
+}
