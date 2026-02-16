@@ -123,6 +123,14 @@ li {
   color: greenyellow;
 }
 
+#Skills ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  gap: 1.25rem;
+  list-style: none;
+  padding: 0;
+}
+
 /* Responsive Design for Desktop*/
 @media screen and (min-width: 64rem) 
 {
@@ -139,6 +147,10 @@ li {
     nav a {
         font-size: 1.5rem;
         padding: 0.625rem 1.25rem;
+    }
+
+    #Skills ul {
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     }
 }
 
@@ -169,6 +181,11 @@ li {
 
     #Connect ul {
         grid-template-columns: 7rem 7rem;
+        gap: 0.625rem;
+    }
+
+    #Skills ul {
+        grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
         gap: 0.625rem;
     }
 }
