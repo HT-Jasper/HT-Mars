@@ -59,3 +59,29 @@ function updateMessage() {
 }
 
 updateMessage();
+
+fetch('https://api.github.com/users/HT-Jasper/repos')
+.then(response => {
+  if (!response.ok) {
+    throw new Error(`Request failed: ${response.status}`);
+  } 
+  return response.json();
+  })
+.then(data => {
+  const repositories = data;
+  console.log(repositories)
+
+  const projectSection = document.getElementById('Projects');
+  const projectList = projectSection.querySelector('ul');
+
+  repositories.forEach((item) => {
+    const projectItem = document.createElement('li');
+    projectItem.innerText = item.name;
+    projectList.appendChild(projectItem);
+  });
+})
+.catch(error => {
+  console.error('Error fetching repositories:', error);
+})
+
+

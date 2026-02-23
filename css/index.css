@@ -138,6 +138,14 @@ li {
   padding: 0;
 }
 
+#Projects ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  gap: 1.25rem;
+  list-style: none;
+  padding: 0;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -174,7 +182,7 @@ button {
         padding: 0.625rem 1.25rem;
     }
 
-    #Skills ul {
+    #Skills ul #Projects ul{
         grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     }
   
@@ -214,7 +222,7 @@ button {
         gap: 0.625rem;
     }
 
-    #Skills ul {
+    #Skills ul #Projects ul{
         grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
         gap: 0.625rem;
     }
