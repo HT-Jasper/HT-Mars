@@ -27,11 +27,14 @@ messageForm.addEventListener('submit', (event) => {
     const message = event.target.usersMessage.value;
 
     console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
+    
 
     const messageSection = document.getElementById('messages');
     const messageList = messageSection.querySelector('ul');
     const newMessage = document.createElement('li');
-    newMessage.innerHTML = `<a href="mailto:${email}">${name}</a> <span>(${email})</span><p>${message}</p>`;
+    newMessage.innerText = `<a href="mailto:${email}">${name}</a> <span>(${email})</span><p>${message}</p>`;
+    messageList.appendChild(newMessage);
+    messageSection.style.display = 'block';
 
     const removeButton = document.createElement('button');
     removeButton.innerText = 'Remove';
@@ -56,6 +59,7 @@ function updateMessage() {
   } else {
     messagesSection.style.display = 'block';
   }
+  
 }
 
 updateMessage();
