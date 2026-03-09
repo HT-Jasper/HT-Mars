@@ -196,6 +196,36 @@ button:hover {
     transform: translateY(-2px);
 }
 
+#Connect ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+}
+
+#Connect a {
+    color: var(--accent);
+    text-decoration: none;
+    font-family: 'Fira Code', monospace;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+#Connect a:visited {
+    color: var(--accent);
+}
+
+#Connect a:hover {
+    background-color: var(--accent-glow);
+    color: white;
+    box-shadow: 0 0 15px var(--accent-glow);
+    transform: translateY(-2px);
+}
+
 /* Responsive Design for Mobile */
 @media screen and (max-width: 48rem) {
     .layout {
