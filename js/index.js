@@ -27,11 +27,14 @@ messageForm.addEventListener('submit', (event) => {
     const message = event.target.usersMessage.value;
 
     console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
+    
 
     const messageSection = document.getElementById('messages');
     const messageList = messageSection.querySelector('ul');
     const newMessage = document.createElement('li');
-    newMessage.innerHTML = `<a href="mailto:${email}">${name}</a> <span>(${email})</span><p>${message}</p>`;
+    newMessage.innerText = `<a href="mailto:${email}">${name}</a> <span>(${email})</span><p>${message}</p>`;
+    messageList.appendChild(newMessage);
+    messageSection.style.display = 'block';
 
     const removeButton = document.createElement('button');
     removeButton.innerText = 'Remove';
@@ -56,6 +59,33 @@ function updateMessage() {
   } else {
     messagesSection.style.display = 'block';
   }
+  
 }
 
 updateMessage();
+
+fetch('https://api.github.com/users/HT-Jasper/repos')
+.then(response => {
+  if (!response.ok) {
+    throw new Error(`Request failed: ${response.status}`);
+  } 
+  return response.json();
+  })
+.then(data => {
+  const repositories = data;
+  console.log(repositories)
+
+  const projectSection = document.getElementById('Projects');
+  const projectList = projectSection.querySelector('ul');
+
+  repositories.forEach((item) => {
+    const projectItem = document.createElement('li');
+    projectItem.innerText = item.name;
+    projectList.appendChild(projectItem);
+  });
+})
+.catch(error => {
+  console.error('Error fetching repositories:', error);
+})
+
+
