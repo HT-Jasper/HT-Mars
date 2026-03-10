@@ -32,7 +32,7 @@ messageForm.addEventListener('submit', (event) => {
     const messageSection = document.getElementById('messages');
     const messageList = messageSection.querySelector('ul');
     const newMessage = document.createElement('li');
-    newMessage.innerText = `<a href="mailto:${email}">${name}</a> <span>(${email})</span><p>${message}</p>`;
+    newMessage.innerHTML = `<a href="mailto:${email}">${name}</a> <span>(${email})</span><p>${message}</p>`;
     messageList.appendChild(newMessage);
     messageSection.style.display = 'block';
 
